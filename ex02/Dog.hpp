@@ -17,7 +17,7 @@ public:
 	virtual ~Dog();
 
 	// member functions
-	virtual void	makeSound() const;
+	virtual void	makeSound() const = 0;
 };
 
 #endif // DOG_HPP

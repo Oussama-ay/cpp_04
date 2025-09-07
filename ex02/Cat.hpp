@@ -17,7 +17,7 @@ public:
 	virtual ~Cat();
 
 	// member functions
-	virtual void	makeSound() const;
+	virtual void	makeSound() const = 0;
 };
 
 #endif // CAT_HPP

@@ -23,15 +23,11 @@ int	main()
 
 	std::cout << "\n=== Wrong Animals ===" << std::endl;
 
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* wrongI = new WrongCat();
+	const WrongAnimal* wrong = new WrongCat();
+	std::cout << wrong->getType() << " " << std::endl;
+	wrong->makeSound();
 
-	std::cout << wrongI->getType() << " " << std::endl;
-	wrongI->makeSound();
-	wrongMeta->makeSound();
-
-	delete wrongMeta;
-	delete wrongI;
+	delete wrong;
 
 	return (0);
 }
