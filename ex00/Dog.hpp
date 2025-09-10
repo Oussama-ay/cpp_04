@@ -10,10 +10,10 @@ public:
 	Dog();
 	Dog(Dog const &obj);
 	Dog &operator=(Dog const &obj);
-	virtual ~Dog();
+	~Dog();
 
 	// member functions
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif // DOG_HPP

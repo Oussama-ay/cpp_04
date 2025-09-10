@@ -14,10 +14,10 @@ public:
 	Cat();
 	Cat(Cat const &obj);
 	Cat &operator=(Cat const &obj);
-	virtual ~Cat();
+	~Cat();
 
 	// member functions
-	virtual void	makeSound() const;
+	void	makeSound() const;
 };
 
 #endif // CAT_HPP
