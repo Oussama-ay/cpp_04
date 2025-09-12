@@ -26,10 +26,6 @@ Animal::~Animal()
 }
 
 // member functions
-void Animal::makeSound() const
-{
-    std::cout << "animal sound" << std::endl;
-}
 
 std::string Animal::getType() const
 {

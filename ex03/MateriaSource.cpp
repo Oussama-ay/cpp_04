@@ -4,7 +4,7 @@
 MateriaSource::MateriaSource()
 {
     for (int i = 0; i < 4; i++)
-        this->materia[i] = NULL;
+        materia[i] = NULL;
 }
 
 MateriaSource::MateriaSource(MateriaSource const &obj)
@@ -12,9 +12,9 @@ MateriaSource::MateriaSource(MateriaSource const &obj)
     for (int i = 0; i < 4; i++)
     {
         if (obj.materia[i] != NULL)
-            this->materia[i] = obj.materia[i]->clone();
+            materia[i] = obj.materia[i]->clone();
         else
-            this->materia[i] = NULL;
+            materia[i] = NULL;
     }
 }
 
@@ -24,13 +24,13 @@ MateriaSource &MateriaSource::operator=(MateriaSource const &obj)
     {
         for (int i = 0; i < 4; i++)
         {
-            if (this->materia[i] != NULL)
+            if (materia[i] != NULL)
             {
-                delete this->materia[i];
-                this->materia[i] = NULL;
+                delete materia[i];
+                materia[i] = NULL;
             }
             if (obj.materia[i] != NULL)
-                this->materia[i] = obj.materia[i]->clone();
+                materia[i] = obj.materia[i]->clone();
         }
     }
     return (*this);
@@ -40,10 +40,10 @@ MateriaSource::~MateriaSource()
 {
     for (int i = 0; i < 4; i++)
     {
-        if (this->materia[i] != NULL)
+        if (materia[i] != NULL)
         {
-            delete this->materia[i];
-            this->materia[i] = NULL;
+            delete materia[i];
+            materia[i] = NULL;
         }
     }
 }
@@ -55,9 +55,9 @@ void MateriaSource::learnMateria(AMateria *m)
         return;
     for (int i = 0; i < 4; i++)
     {
-        if (this->materia[i] == NULL)
+        if (materia[i] == NULL)
         {
-            this->materia[i] = m;
+            materia[i] = m;
             return;
         }
     }
@@ -68,8 +68,8 @@ AMateria *MateriaSource::createMateria(std::string const &type)
 {
     for (int i = 0; i < 4; i++)
     {
-        if (this->materia[i] != NULL && this->materia[i]->getType() == type)
-            return (this->materia[i]->clone());
+        if (materia[i] != NULL && materia[i]->getType() == type)
+            return (materia[i]->clone());
     }
     return (NULL);
 }

@@ -16,7 +16,7 @@ Cure &Cure::operator=(Cure const &obj)
 {
     std::cout << "Cure assignment operator called" << std::endl;
     if (this != &obj)
-        this->type = obj.type;
+        type = obj.type;
     return (*this);
 }
 
