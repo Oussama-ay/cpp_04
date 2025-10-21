@@ -28,7 +28,6 @@ WrongAnimal::~WrongAnimal()
 // member functions
 void WrongAnimal::makeSound() const
 {
-    std::cout << m_type << std::endl;
     std::cout << "wrong animal sound" << std::endl;
 }
 
